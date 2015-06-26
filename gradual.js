@@ -68,7 +68,7 @@ function submitForm (form, done) {
   content.document.body.appendChild(formClone);
   var frameForm = content.document.getElementById(formCloneId);
   var prefix = frameForm.action.indexOf('?') === -1 ? '?' : '&';
-  frameForm.action += prefix + 'json&as-text' + queso(state.qs(form), true);
+  frameForm.action += prefix + 'json&as-text' + queso.stringify(state.qs(form), true);
   frameForm.onsubmit = null;
   frameForm.submit();
   restore.forEach(run);
