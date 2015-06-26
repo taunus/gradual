@@ -10,13 +10,15 @@ npm install gradual --save
 
 # Setup
 
-Use `gradual.configure` to give `gradual` a reference of your `taunus` object to set it up. You can also set a `qs` option that will be used to construct a query string appended to every AJAX form request.
+Use `gradual.configure` to give `gradual` a reference of your `taunus` object to set it up. You can also set a `qs` option that will be used to construct a query string appended to each AJAX form request.
 
 ```js
 gradual.configure({
   taunus: taunus,
-  qs: {
-    foo: 'bar'
+  qs: function (form) {
+    return {
+      foo: 'bar'
+    };
   }
 });
 ```
