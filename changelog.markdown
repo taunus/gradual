@@ -1,4 +1,4 @@
-# 1.0.0 Formium
+# 1.0.1 Formium
 
 - Extracted form submission logic into `formium`, which is framework agnostic
 
