@@ -17,7 +17,7 @@
     "assignment": "2.2.0",
     "contra.emitter": "1.1.1",
     "dominus": "5.0.0",
-    "formium": "1.0.0",
+    "formium": "1.0.1",
     "formulario": "1.0.0"
   },
   "devDependencies": {},
