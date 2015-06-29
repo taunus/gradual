@@ -1,6 +1,6 @@
 {
   "name": "gradual",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automated progressive enhancement for <form> elements when using Taunus",
   "main": "gradual.js",
   "repository": {
@@ -20,5 +20,6 @@
     "formium": "1.0.0",
     "formulario": "1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "scripts": {}
 }
