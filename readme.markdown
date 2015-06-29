@@ -31,26 +31,11 @@ Gradual exposes an event emitter that has three additional methods.
 
 ### `gradual.hijack(e)`
 
-Exactly as you would expect, this method will submit a `<form>` asynchronously and prevent the default browser form submission mechanism.
+Exactly as you would expect, this method will submit a `<form>` asynchronously and prevent the default browser form submission mechanism. See [formium][3] for details.
 
 ```js
 form.addEventListener('submit', gradual.hijack);
 ```
-
-The form submission mechanism provided by `gradual` will:
-
-- Run any [transformers](#gradualtransform) on the `<form>` elements before submission
-- Submit the `<form>` from within an `<iframe>`
-  - The form submission is effectively AJAX
-  - Browser loading indicator while the form is being posted _(unlike AJAX)_
-  - Form auto-fill values are persisted by the browser _(unlike AJAX)_
-- Run the restoration callback for each one of the previously applied [transformers](gradualtransform)
-- Disable the `<form>` and `<button>`s inside it while the form loads
-- Grab the response once the `<iframe>` finishes loading
-- Emit relevant events
-- Handle the response by [convention](#conventions)
-  - Handles Taunus `redirect` payloads
-  - Handles [custom validation](#custom-validation) messages
 
 ### `gradual.submit(options, done?)`
 
@@ -100,19 +85,19 @@ gradual.transform(function fix (form) {
 });
 ```
 
-## Conventions
+## Events
 
 Whenever a response includes a Taunus redirect command (e.g the server-side response ended in a `taunus.redirect` call), or otherwise returns a form validation payload, `gradual` will respond to that accordingly.
 
-Furthermore, `gradual` always emits two of three events whenever a `<form>` submission gets its results back.
+Gradual always emits two of three events whenever a `<form>` submission gets its results back.
 
 - `error` is emitted with `(err)` if there was an error generating or processing the response
 - `data` is emitted with `(data)` if the response was successfully generated and processed
-- `response` is always emitted with `(err, data)`
+- `response` is **always** emitted with `(err, data)`
 
 ## Custom Validation
 
-Taunus defines a flexible validation format where special responses will be captured and handled by `gradual`. Taunus looks for validation messages in all of the following fields JSON responses.
+Taunus'es `gradual` defines a flexible validation format where special responses will be captured and handled by `gradual`. Taunus looks for validation messages in all of the following fields JSON responses.
 
 - `validation`
 - `messages`
@@ -131,3 +116,4 @@ MIT
 
 [1]: https://github.com/bevacqua/formulario
 [2]: https://github.com/bevacqua/insignia
+[3]: https://github.com/taunus/formium
