@@ -1,4 +1,4 @@
-# 1.0.2 Rivets
+# 1.0.3 Rivets
 
 - Fixed a bug that made `qs` a required option
 
