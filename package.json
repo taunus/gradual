@@ -15,9 +15,9 @@
   "homepage": "https://github.com/taunus/gradual",
   "dependencies": {
     "assignment": "2.2.0",
-    "contra.emitter": "1.1.1",
+    "contra": "1.9.1",
     "dominus": "5.0.0",
-    "formium": "1.0.1",
+    "formium": "1.0.2",
     "formulario": "1.0.0"
   },
   "devDependencies": {},

@@ -1,3 +1,8 @@
+# 1.0.4 Bumpy Road
+
+- Bump `formium@1.0.2`
+- Upgrade `contra`
+
 # 1.0.3 Rivets
 
 - Fixed a bug that made `qs` a required option

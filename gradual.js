@@ -1,6 +1,6 @@
 'use strict';
 
-var emitter = require('contra.emitter');
+var emitter = require('contra/emitter');
 var formium = require('formium');
 var formulario = require('formulario');
 var formResponseHandler = require('./lib/formResponseHandler');
