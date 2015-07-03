@@ -1,6 +1,6 @@
-# 1.0.4 Bumpy Road
+# 1.0.5 Bumpy Road
 
-- Bump `formium@1.0.2`
+- Bump `formium@1.0.3`
 - Upgrade `contra`
 
 # 1.0.3 Rivets
