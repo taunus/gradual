@@ -2,6 +2,10 @@
 
 > Automated progressive enhancement for `<form>` elements when using Taunus
 
+# Note
+
+Starting in `taunus@7.0.0` this module is incorporated in _core_ and enabled by default!
+
 # Install
 
 ```shell
