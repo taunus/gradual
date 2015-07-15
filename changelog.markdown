@@ -1,3 +1,7 @@
+# 1.0.6 Errorify
+
+- Added support for error messages in responses
+
 # 1.0.5 Bumpy Road
 
 - Bump `formium@1.0.3`
