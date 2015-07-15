@@ -1,3 +1,7 @@
+# 1.0.7 Contextualize
+
+- Removed opinionated close handler from conventional dialogs
+
 # 1.0.6 Errorify
 
 - Added support for error messages in responses
